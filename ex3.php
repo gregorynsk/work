@@ -1,6 +1,6 @@
 <?php
 
-$book = array ('title'=>'Bukvar','author'=>'unnamed','pages'=>80);
+$book = array ('title'=>'Bukvar','author'=>'Kiril','pages'=>80);
 var_dump ($book);
 
 echo "Nedavno ya prochital knigu ".$book['title'].",napisannuyu avtorom \n"

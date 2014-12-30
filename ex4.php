@@ -13,14 +13,5 @@ echo "Nedavno ya prochital knigi "
         .($books['0']['pages1']+$books['1']['pages2'])
         ." straniz, ne ojidal ot sebya podobnogo.";
         
-
-
-
-
-
-
-
-
-
 ?>
 
