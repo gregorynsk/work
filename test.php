@@ -47,7 +47,7 @@ var_dump($date4);
 
 echo "min day ".min ($date3);
 echo "<br>";
-echo "min month ".max ($date4);
+echo "max month ".max ($date4);
 echo "<br>";
 
 array_multisort($date2, SORT_ASC);
