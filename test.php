@@ -2,11 +2,11 @@
 
 $date = array (1,2,3,4,5);
 
-$date[0]= mktime(mt_rand(1, 24),mt_rand(1, 60),mt_rand(1, 60),mt_rand(1, 12),mt_rand(1, 31),mt_rand(1970, 2015));
-$date[1]= mktime(mt_rand(1, 24),mt_rand(1, 60),mt_rand(1, 60),mt_rand(1, 12),mt_rand(1, 31),mt_rand(1970, 2015));
-$date[2]= mktime(mt_rand(1, 24),mt_rand(1, 60),mt_rand(1, 60),mt_rand(1, 12),mt_rand(1, 31),mt_rand(1970, 2015));
-$date[3]= mktime(mt_rand(1, 24),mt_rand(1, 60),mt_rand(1, 60),mt_rand(1, 12),mt_rand(1, 31),mt_rand(1970, 2015));
-$date[4]= mktime(mt_rand(1, 24),mt_rand(1, 60),mt_rand(1, 60),mt_rand(1, 12),mt_rand(1, 31),mt_rand(1970, 2015));
+$date[0]= mktime(mt_rand(0, 23),mt_rand(0, 59),mt_rand(0, 59),mt_rand(1, 12),mt_rand(1, 31),mt_rand(1970, 2015));
+$date[1]= mktime(mt_rand(0, 23),mt_rand(0, 59),mt_rand(0, 59),mt_rand(1, 12),mt_rand(1, 31),mt_rand(1970, 2015));
+$date[2]= mktime(mt_rand(0, 23),mt_rand(0, 59),mt_rand(0, 59),mt_rand(1, 12),mt_rand(1, 31),mt_rand(1970, 2015));
+$date[3]= mktime(mt_rand(0, 23),mt_rand(0, 59),mt_rand(0, 59),mt_rand(1, 12),mt_rand(1, 31),mt_rand(1970, 2015));
+$date[4]= mktime(mt_rand(0, 23),mt_rand(0, 59),mt_rand(0, 59),mt_rand(1, 12),mt_rand(1, 31),mt_rand(1970, 2015));
 
 var_dump($date);
 echo "<br>";
