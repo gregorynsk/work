@@ -27,7 +27,29 @@ echo "min day ".min(date('d',$date[0]),date('d',$date[1]),date('d',$date[2]),dat
 echo "<br>";
 echo "max month ".max(date('m',$date[0]),date('m',$date[1]),date('m',$date[2]),date('m',$date[3]),date('m',$date[4]));
 echo "<br>";
+day_of_week($date);
 
+
+function day_of_week ($date){
+   $dayofweek = array(date('w',$date[0]),date('w',$date[1]),date('w',$date[2]),date('w',$date[3]),date('w',$date[4])); 
+   array_multisort($dayofweek, SORT_DESC);
+   $day = array_pop($dayofweek);
+   if ($day == 0){
+       echo 'min day of week - Sun';
+   }elseif ($day == 1) {
+       echo 'min day of week - Mon';
+   }elseif ($day == 2) {
+       echo 'min day of week - Tue';
+    }elseif ($day == 3) {
+       echo 'min day of week - Wed';
+    }elseif ($day == 4) {
+       echo 'min day of week - Thu';
+    }elseif ($day == 5) {
+       echo 'min day of week - Fri';
+    }else {
+       echo 'min day of week - Sat';
+    }
+   }
 //$date2[0]=date('d.m.Y H:m:s',$date[0]);
 //$date2[1]=date('d.m.Y H:m:s',$date[1]);
 //$date2[2]=date('d.m.Y H:m:s',$date[2]);
