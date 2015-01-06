@@ -177,24 +177,62 @@ if ($bd_s["bear"]&&$bd_s["jacket"]&&$bd_s["bike"]){
 echo 'Общее количество заказанных товаров: '.sum_n($bd_s).' шт.<br>';
 echo 'Общая сумма заказа: '.sum_p($bd_s).' руб.<br>';
 
+//Уведомления
+
 echo '<h3>Уведомления:</h3>';
-  
-if ($bd_s["bear"]["number"]>$bd_s["bear"]["sclad"]){
-    echo '<font color="red">Мишек столько нет!</font><br>';
-}
-if ($bd_s["jacket"]["number"]>$bd_s["jacket"]["sclad"]){
-    echo '<font color="red">Курток столько нет!</font><br>';
-}
-if ($bd_s["bike"]["number"]>$bd_s["bike"]["sclad"]){
-    echo '<font color="red">Великов столько нет!</font><br>';
-}
-echo '<br>';
+ 
+
 echo ($bd_s["bear"]["number"]<=$bd_s["bear"]["sclad"]
     && $bd_s["jacket"]["number"]<=$bd_s["jacket"]["sclad"]
     && $bd_s["bike"]["number"]<=$bd_s["bike"]["sclad"]) ? 
 '<font color="blue">Все ок, всего хватает!</font><br>' :
-'<font color="red">Вы заказали слишком большое количество товаров!</font><br>';
+'<font color="red">Вы заказали слишком большое количество товаров:</font>';
+echo '<br>';
+if ($bd_s["bear"]["number"]>$bd_s["bear"]["sclad"]){
+    echo '<font color="red">-Мишек столько нет в наличии!</font><br>';
+}
+if ($bd_s["jacket"]["number"]>$bd_s["jacket"]["sclad"]){
+    echo '<font color="red">-Курток столько нет в наличии!</font><br>';
+}
+if ($bd_s["bike"]["number"]>$bd_s["bike"]["sclad"]){
+    echo '<font color="red">-Великов столько нет в наличии!</font><br>';
+}
+echo '<br>';
 
+//ниже использую switch, если требуется по ТЗ, можно раскомментить
+
+//switch ($bd_s["bear"]["sclad"]) {
+//    case 0:
+//        echo 'Мишек нет на складе, закрытая позиция';
+//
+//break;
+//
+//    default:
+//        echo 'Мишки есть на складе, открытая позиция';
+//        break;
+//}
+//echo '<br>';
+//switch ($bd_s["jacket"]["sclad"]) {
+//    case 0:
+//        echo 'Курток нет на складе, закрытая позиция';
+//
+//break;
+//
+//    default:
+//        echo 'Куртки есть на складе, открытая позиция';
+//        break;
+//}
+//echo '<br>';
+//switch ($bd_s["bike"]["sclad"]) {
+//    case 0:
+//        echo 'Великов нет на складе, закрытая позиция';
+//
+//break;
+//
+//    default:
+//        echo 'Велики есть на складе, открытая позиция';
+//        break;
+//}
 
 
 
