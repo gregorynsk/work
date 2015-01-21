@@ -14,19 +14,21 @@ $news='Четыре новосибирские компании вошли в с
 Звезды телешоу «Голос» Наргиз Закирова и Гела Гуралиа споют в «Маяковском»';
 $news=  explode("\n", $news);
 
-input_func($news);
+get_news($news);
 
-function input_func($news) {
-if (($_GET == false) OR ($_GET['id'] == false)){
+function get_news($news) {
+if (!isset($_GET) OR !isset($_GET['id'])){
         header("location: http://xaver.loc/404.php");
         exit;
     }
-      elseif ($_GET['id'] <= 8){
+      elseif ($_GET['id'] < count($news)){
         echo 'Новость: '.$news[$_GET['id']];
     } else {
-        echo 'Все новости:<br>'.$news[0].'<br>'.$news[1].'<br>'.$news[2].'<br>'.$news[3]
-            .'<br>'.$news[4].'<br>'.$news[5].'<br>'.$news[6].'<br>'.$news[7].'<br>'.$news[8];
+        foreach($news as $value) {
+        echo $value.'<br>';
     }
-
+    }
 }
+
+
 ?>
