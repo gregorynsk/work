@@ -17,13 +17,14 @@ $news=  explode("\n", $news);
 input_func($news);
 
 function input_func($news) {
-    if (($_POST == false) OR ($_POST['id'] == false)){
+    if (!isset($_POST) OR !isset($_POST['id'])){
         echo '<font color="red">Не введен номер новости</font><br><br>';        
-    } elseif ($_POST['id'] <= 8){
+    } elseif ($_POST['id'] < count($news)){
         echo 'Новость: '.$news[$_POST['id']].'<br>';
     } else {
-        echo 'Все новости:<br>'.$news[0].'<br>'.$news[1].'<br>'.$news[2].'<br>'.$news[3]
-            .'<br>'.$news[4].'<br>'.$news[5].'<br>'.$news[6].'<br>'.$news[7].'<br>'.$news[8].'<br>';
+        foreach($news as $value) {
+        echo $value.'<br>';
+    }
     }
 }
 ?>
