@@ -18,8 +18,10 @@ get_news($news);
 
 function get_news($news) {
 if (!isset($_GET) OR !isset($_GET['id'])){
-        header("location: http://xaver.loc/404.php");
-        exit;
+        header("HTTP/1.x 404 Not Found");
+        header("Status: 404 Not Found");
+        require_once($_SERVER['DOCUMENT_ROOT'].'/404.php');
+        exit();
     }
       elseif ($_GET['id'] < count($news)){
         echo 'Новость: '.$news[$_GET['id']];
