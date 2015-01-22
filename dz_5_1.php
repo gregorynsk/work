@@ -17,7 +17,7 @@ $news=  explode("\n", $news);
 get_news($news);
 
 function get_news($news) {
-if (!isset($_GET) OR !isset($_GET['id'])){
+if (!isset($_GET['id']) OR !is_numeric($_GET['id'])){
         header("HTTP/1.x 404 Not Found");
         header("Status: 404 Not Found");
         require_once($_SERVER['DOCUMENT_ROOT'].'/404.php');

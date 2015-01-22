@@ -17,7 +17,7 @@ $news=  explode("\n", $news);
 input_func($news);
 
 function input_func($news) {
-    if (!isset($_POST) OR !isset($_POST['id'])){
+    if (!isset($_POST['id']) OR !is_numeric($_POST['id'])){
         echo '<font color="red">Не введен номер новости</font><br><br>';        
     } elseif ($_POST['id'] < count($news)){
         echo 'Новость: '.$news[$_POST['id']].'<br>';
