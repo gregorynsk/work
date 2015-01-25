@@ -260,7 +260,8 @@ function head_and_shoulders() {
     <td width="125">Цена</td>
     <td width="125">Имя</td>
     <td width="125">Удалить</td>
-    </tr>';
+    </tr>
+    </table>';
     foreach ($_SESSION['ad'] as $num => $value) {
         if (isset($_SESSION['ad'])) {
             echo '<table border="1" cellpadding="0" cellspacing="0" width="500">
